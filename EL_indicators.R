@@ -1,4 +1,14 @@
-#Creating a function to get shares of total land area
+# Creating a function to automate the process of calculating agroenvironmental indicators dessiminated in FAOstat website.
+# This functions works on four indicators: % of annual change; % of total Agriculture area; % of total Land area'and % of total Forest area
+# However the EL_indicators function can easily be adapted to include other indicators whose calculation 
+# involves ratios between item-elemen combinations.
+
+#Two arguments are needed.
+# 1) A wide format dataframe (df) containing the item-element combinations as columns/variables. 
+#    This wide format is provided by the ratios_wide function properly documented elsewhere.
+
+# 2) A indicator argumento telling the function the FAO code of the desired indicator.
+
 EL_indicators <- function(df, indicator = NULL){
 
 #Packages the fucntion need
@@ -266,15 +276,6 @@ EL_df <-
 EL_df
 
 }
-
-
-
-
-EL_7209 <- EL_indicators(df = wide_bind, indicator = 7209)
-  
-  
-
-formals(EL_indicators)
 
 
 
