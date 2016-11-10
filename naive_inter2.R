@@ -35,7 +35,7 @@ if(Year_ini == "initial"){
             Value = ~ ifelse(YR_INI == YR_END,
                              Value,
                              INI_VAL + (END_VAL - INI_VAL)/(YR_END - YR_INI) * (Year - YR_INI))) %>% 
-    select_( ~-END_VAL, ~-INI_VAL, ~-YR_END, ~-YR_INI, ~-YR)
+    select_( ~-END_VAL, ~-INI_VAL, ~-YR_END, ~-YR_INI, ~-YR, ~-na.count)
   
  
 } else {
@@ -58,7 +58,7 @@ if(Year_ini == "initial"){
             Value = ~ ifelse(YR_INI == YR_END,
                              Value,
                              INI_VAL + (END_VAL - INI_VAL)/(YR_END - YR_INI) * (Year - YR_INI))) %>% 
-    select_( ~-END_VAL, ~-INI_VAL, ~-YR_END, ~-YR_INI, ~-YR)
+    select_( ~-END_VAL, ~-INI_VAL, ~-YR_END, ~-YR_INI, ~-YR, ~-na.count)
   
 }
   
