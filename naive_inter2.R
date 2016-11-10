@@ -1,10 +1,9 @@
 
 #This function applies the interpolation process used for filling gaps in 
 # outsourcing data tables. 
-# the naive_inter function expands the variable year from the minimum year with obseved value
-# to the year passed on the Year_end in the function. 
+# the naive_inter function expands the variable year at an specifyied interval.
 # From that point, operations as the last observed observation carried forward and backward
-# are used to replace the NAs for each complet time-series in the country-itemName combination.
+# are used to replace the NAs for  the country-itemName combinations.
 
 
 naive_inter <- function(df, Year_ini = NULL, Year_end = NULL){ 
