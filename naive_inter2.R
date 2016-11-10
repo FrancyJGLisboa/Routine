@@ -6,9 +6,6 @@
 # From that point, operations as the last observed observation carried forward and backward
 # are used to replace the NAs for each complet time-series in the country-itemName combination.
 
-# Beyond the dataframe the user can pass  arguments regarding ItemName, ItemCode,
-#ElementCode, ElementName, Unit, and Flag. The final outcome is a typical dataframe with
-# AreaCode, Areaname, ItemCode, Item Name, ElementCode, ElementName, Year, Value, Unit, Flag
 
 naive_inter <- function(df, Year_ini = NULL, Year_end = NULL){ 
                           
